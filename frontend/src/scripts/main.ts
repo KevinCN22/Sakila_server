@@ -29,7 +29,7 @@ const pageSize = 10;                  // Número de resultados por página
 // Carga todas las películas de la base de datos.
 const loadFilms = async () => {
   try {               //Realiza un fetch HTTP GET a /api/films
-    const response = await fetch('http://localhost:3000/api/films');
+    const response = await fetch('/api/films');
     filmsData = await response.json();      // Guarda los resultados
     filteredFilms = [...filmsData];
     renderFilms();                // Lamada a la función para mostrar los resultados
@@ -42,7 +42,7 @@ const loadFilms = async () => {
 // Carga las películas disponibles
 const loadAvailableFilms = async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/films/available');
+    const response = await fetch('/api/films/');
     filmsData = await response.json();
     filteredFilms = [...filmsData];
     renderFilms();
