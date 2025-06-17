@@ -35,7 +35,7 @@ const loadFilms = () => __awaiter(void 0, void 0, void 0, function* () {
 // Carga las películas disponibles
 const loadAvailableFilms = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const response = yield fetch('/api/films');
+        const response = yield fetch('/api/films/');
         filmsData = yield response.json();
         filteredFilms = [...filmsData];
         renderFilms();
